@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "calc": {
+      "commandName": "Project",
+      "sqlDebugging": false
+    }
+  }
+}

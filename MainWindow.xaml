@@ -1,0 +1,64 @@
+﻿<Window x:Class="CalculatorApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Calculator" Height="400" Width="300" ResizeMode="NoResize" Background="#F3F3F3">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Display TextBox -->
+        <TextBox Name="Display" 
+                 FontSize="36" 
+                 FontWeight="Bold" 
+                 HorizontalAlignment="Stretch" 
+                 VerticalAlignment="Center"
+                 IsReadOnly="True" 
+                 TextAlignment="Right" 
+                 Margin="10" 
+                 Grid.Row="0" 
+                 Height="70" 
+                 Background="#FFFFFF"/>
+
+        <!-- Buttons Grid -->
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Button Definitions -->
+            <Button Content="7" Grid.Row="0" Grid.Column="0" Click="Button_Click"/>
+            <Button Content="8" Grid.Row="0" Grid.Column="1" Click="Button_Click"/>
+            <Button Content="9" Grid.Row="0" Grid.Column="2" Click="Button_Click"/>
+            <Button Content="C" Grid.Row="0" Grid.Column="3" Background="#FF6666" Click="ClearButton_Click"/>
+
+            <Button Content="4" Grid.Row="1" Grid.Column="0" Click="Button_Click"/>
+            <Button Content="5" Grid.Row="1" Grid.Column="1" Click="Button_Click"/>
+            <Button Content="6" Grid.Row="1" Grid.Column="2" Click="Button_Click"/>
+            <Button Content="*" Grid.Row="1" Grid.Column="3" Background="#FFFF66" Click="OperatorButton_Click"/>
+
+            <Button Content="1" Grid.Row="2" Grid.Column="0" Click="Button_Click"/>
+            <Button Content="2" Grid.Row="2" Grid.Column="1" Click="Button_Click"/>
+            <Button Content="3" Grid.Row="2" Grid.Column="2" Click="Button_Click"/>
+            <Button Content="-" Grid.Row="2" Grid.Column="3" Background="#FFFF66" Click="OperatorButton_Click"/>
+
+            <Button Content="0" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Click="Button_Click"/>
+            <Button Content="." Grid.Row="3" Grid.Column="2" Click="Button_Click"/>
+            <Button Content="+" Grid.Row="3" Grid.Column="3" Background="#FFFF66" Click="OperatorButton_Click"/>
+
+            <Button Content="=" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" Background="#66FF66" Click="EqualButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>
